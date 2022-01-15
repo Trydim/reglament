@@ -1,0 +1,19 @@
+
+
+.checkbox {
+  &__input {
+    &:focus + .checkbox__label:before {
+    }
+    &:checked + .checkbox__label:after {
+    }
+  }
+
+  &__label {
+    &:before {
+    }
+    &::after {
+    }
+  }
+
+  &__text {  }
+}

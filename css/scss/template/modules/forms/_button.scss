@@ -1,0 +1,16 @@
+// Стандартная кнопка
+// snippets/live template: btn
+//
+
+
+.button {
+
+  &_border {  }
+  &_black {  }
+
+  // основная
+  &_main { }
+
+  // маленькая+красная
+  &_red_s { }
+}

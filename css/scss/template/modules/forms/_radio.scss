@@ -1,0 +1,72 @@
+.form-radio {
+  position: relative;
+  font-family: $font-family-Opensans;
+}
+
+.form-radio input[type=radio] {
+  display: none;
+}
+
+.form-radio__input {
+  position: absolute;
+}
+
+.form-radio__label {
+  @include flex-row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 35px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-radio input[type=radio]:checked + label:before {
+  background: url(../icons/radio-active.svg) 0 0 no-repeat;
+  filter: none;
+}
+
+//Hover
+.form-radio input[type=radio]:not(:checked):hover + label:before {
+  background: url(../icons/radio-hover.svg) 0 0 no-repeat;
+  filter: none;
+}
+
+.form-radio label:before {
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 28px;
+  padding-right: 10px;
+  background: url(../icons/radio.svg) no-repeat;
+  transition: all 0.25s ease;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.form-radio:hover .tooltip-block {
+  top: 0;
+  visibility: visible;
+  transition: 0.4s;
+  transform: translateY(15%);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .form-radio__label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    width: 96%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 779px) {
+  .form-radio__label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    width: 96%;
+  }
+}
