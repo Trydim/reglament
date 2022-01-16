@@ -1,0 +1,44 @@
+// border
+
+/** Подробное описание
+ *
+ * @param $radius [Sass::Script::Value::Base|Sass::Script::Value::]
+ */
+@mixin border($radius, $width, $color: black, $style: solid) {
+  @if (type-of($radius) == 'list') {
+    @if (length($radius) == 4) {
+      border: {
+        top-left-radius: nth($radius, 1);
+        top-right-radius: nth($radius, 2);
+        bottom-right-radius: nth($radius, 3);
+        bottom-left-radius: nth($radius, 4);
+      };
+    } @else {
+      @if (length($radius) < 3 or nth($radius, 3) == 'v') {
+        border: {
+          top-left-radius: nth($radius, 1);
+          top-right-radius: nth($radius, 1);
+          bottom-right-radius: nth($radius, 2);
+          bottom-left-radius: nth($radius, 2);
+        };
+      } @else {
+        border: {
+          top-left-radius: nth($radius, 1);
+          bottom-left-radius: nth($radius, 1);
+          top-right-radius: nth($radius, 2);
+          bottom-right-radius: nth($radius, 2);
+        };
+      }
+    }
+  } @else {
+    border: {
+      radius: $radius;
+    };
+  }
+
+  border: $width $color $style;
+}
+
+.b {
+  @include border(2px, 1px);
+}

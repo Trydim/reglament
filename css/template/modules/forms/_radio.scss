@@ -1,0 +1,26 @@
+// Радиобок
+// snippets/live template: radio
+// Шаблон:
+// <div class="radio">
+//   <input type="radio" class="radio__input" id="">
+//   <label class="radio__text" for=""></label>
+// </div>
+//
+
+.radio {
+  &__input {
+    &:focus + .checkbox__label:before {
+    }
+    &:checked + .checkbox__label:after {
+    }
+  }
+
+  &__label {
+    &:before {
+    }
+    &::after {
+    }
+  }
+
+  &__text {  }
+}

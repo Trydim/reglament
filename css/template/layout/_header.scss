@@ -1,5 +1,5 @@
 /* Header */
-.header {
+.#{$pr}header {
    // .header__top
    &__top {
    }
@@ -12,7 +12,7 @@
 }
 
 /* Navigation */
-.navigation {
+.#{$pr}navigation {
    &__item {
    }
    &__menu {

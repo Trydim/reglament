@@ -1,0 +1,26 @@
+// Чекбокс
+// snippets/live template: cn
+// Шаблон:
+// <div class="checkbox">
+//   <input type="checkbox" class="checkbox__input" id="">
+//   <label class="checkbox__text" for=""></label>
+// </div>
+//
+
+.checkbox {
+  &__input {
+    &:focus + .checkbox__label:before {
+    }
+    &:checked + .checkbox__label:after {
+    }
+  }
+
+  &__label {
+    &:before {
+    }
+    &::after {
+    }
+  }
+
+  &__text {  }
+}
